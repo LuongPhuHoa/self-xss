@@ -8,7 +8,7 @@ Self-XSS attack using bit.ly to grab cookies tricking users into running malicio
 
 ### How it works?
 
-Self-XSS is a social engineering attack used to gain control of victims' web accounts by tricking users into copying and pasting malicious content into their browsers. Since Web browser vendors and web sites have taken steps to mitigate this attack by blocking pasting javascript tag, I figure out a way of doing that using Bit.ly, so we can create a redirect pointing to "website.com/javascript:malicious_code". If the user is tricked to run the code after "website.com/" the cookies of your authenticated session of website.com will be sent to the attacker.
+Self-XSS is a social engineering attack used to gain control of victims' web accounts by tricking users into copying and pasting malicious content into their browsers. Since Web browser vendors and web sites have taken steps to mitigate this attack by blocking pasting javascript tag, I figure out a way of doing that using Bit.ly, so we can create a redirect pointing to "website.com/javascript:malicious_code". If the user is tricked to run the code after "website.com/" the cookies of its authenticated session of website.com will be sent to the attacker.
 
 ### Features:
 
